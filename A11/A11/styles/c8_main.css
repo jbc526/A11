@@ -1,0 +1,318 @@
+/* General reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: white;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 800px;
+    margin: 0 auto;
+    border: 3px solid #931420;
+    background-color: #fffded;
+}
+
+/* Links style */
+a:focus, a:hover {
+    font-style: italic;
+}
+
+/* Header and logo */
+header {
+    border-bottom: 3px solid #931420;
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+    padding-right: 30px;
+    padding-left: 30px;
+    background: linear-gradient(#f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+    text-align: center;
+}
+
+header h2 {
+    font-size: 175%;
+    color: #800000;
+}
+
+header h3 {
+    font-size: 130%;
+    font-style: italic;
+}
+
+header img {
+    float: left;
+    padding: 0 30px;
+    max-width: 40%;
+    min-width: 150px;
+    padding: 10px 0;
+}
+
+/* Shadow text class */
+.shadow {
+    text-shadow: 2px 2px 2px #800000;
+}
+
+/* Sections */
+section {
+    float: left;
+    width: 69%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+section h1 {
+    font-size: 150%;
+    padding: .5em 0 .25em 0;
+    margin: 0;
+}
+
+section h2 {
+    color: #800000;
+    font-size: 130%;
+    padding: .5em 0 .25em 0;
+}
+
+section p {
+    padding-bottom: .5em;
+}
+
+section blockquote {
+    padding: 0 2em;
+    font-style: italic;
+}
+
+section ul {
+    padding: 0 0 .25em 1.25em;
+    list-style-type: circle;
+}
+
+section li {
+    padding-bottom: .35em;
+}
+
+/* Articles */
+article {
+    padding: .5em 0;
+    border-top: 2px solid #800000;
+    border-bottom: 2px solid #800000;
+}
+
+article h2 {
+    padding-top: 0;
+}
+
+article h3 {
+    font-size: 105%;
+    padding-bottom: .25em;
+}
+
+article img {
+    max-width: 30%;
+    float: right;
+    margin: .5em 0 1em 1em;
+    border: 1px solid black;
+}
+
+/* Aside */
+aside {
+    width: calc(100% - 40px);
+    padding: 0 20px 20px 20px;
+}
+
+aside h2 {
+    color: #800000;
+    font-size: 130%;
+    padding: .5em 0 .25em 0;
+}
+
+aside h3 {
+    font-size: 105%;
+    padding-bottom: .25em;
+}
+
+aside img {
+    padding-bottom: 1em;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    header img {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    section, aside {
+        float: none;
+        width: calc(100% - 40px);
+        padding: 15px;
+    }
+
+    aside {
+        padding-right: 15px;
+    }
+
+    h1 {
+        font-size: 125%;
+    }
+
+    h2 {
+        font-size: 175%;
+        color: #800000;
+    }
+
+    h2 a {
+        font-size: 85%;
+    }
+
+    .speakers-list {
+        column-count: 1;
+    }
+
+    #nav_menu {
+        display: none;
+    }
+
+    #mobile_menu {
+        display: block;
+    }
+
+    /* Mobile menu styles */
+    .slicknav_nav {
+        display: block;
+        background-color: #800000;
+    }
+
+    .slicknav_menu {
+        background-color: #800000;
+    }
+}
+
+/* Navigation */
+#nav_menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#nav_menu ul li {
+    float: left;
+}
+
+#nav_menu ul li a {
+    display: block;
+    width: 160px;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: #800000;
+    color: white;
+    font-weight: bold;
+}
+
+#nav_menu a.current {
+    color: yellow;
+}
+
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+#nav_menu ul ul li {
+    float: none;
+}
+
+#nav_menu ul li:hover > ul {
+    display: block;
+}
+
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* Mobile Menu Button */
+.slicknav_btn {
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    float: right;
+    padding: 0.438em 0.625em;
+    cursor: pointer;
+    background-color: #222222;
+    color: #FFF;
+    font-weight: bold;
+    border-radius: 4px;
+    text-shadow: 0 1px 3px #000;
+}
+
+.slicknav_icon-bar {
+    display: block;
+    width: 1.125em;
+    height: 0.125em;
+    background-color: #f5f5f5;
+    margin: 0.188em 0 0 0.438em;
+    border-radius: 1px;
+    box-shadow: black;
+}
+
+/* Mobile menu text */
+.slicknav_menu .slicknav_menutxt {
+    display: block;
+    line-height: 1.188em;
+    float: left;
+}
+
+/* Menu items */
+.slicknav_nav ul,
+.slicknav_nav li {
+    display: block;
+}
+
+.slicknav_nav a {
+    display: block;
+    padding: 5px 10px;
+    margin: 2px 5px;
+    text-decoration: none;
+}
+
+.slicknav_nav .slicknav_item {
+    display: block;
+    cursor: pointer;
+}
+
+.slicknav_nav .slicknav_item a {
+    display: inline;
+}
+
+/* Hover effect for mobile menu items */
+.slicknav_nav .slicknav_item:hover {
+    border-radius: 6px;
+}
+
+.slicknav_nav a:hover {
+    border-radius: 6px;
+}
+
+.slicknav_nav .slicknav_arrow {
+    font-size: 0.8em;
+    margin-left: 0.4em;
+}
+
+/* Footer */
+footer {
+    background-color: #931420;
+    clear: both;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    padding: 1em 0;
+}
